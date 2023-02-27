@@ -130,12 +130,15 @@ impl Server {
     }
 
     fn share(&self) {
+        /*
         if let Some(url) = &self.keep_url {
             println!("keep alive url: {}", url)
         }
         if let Some(uuid) = &self.uuid {
             println!("password: {}", uuid);
         }
+        */
+        println!("Go go go...");
     }
 
     fn get_uuid_from_replit_db(&self) -> Result<String> {
@@ -161,8 +164,7 @@ impl Server {
         let uuid = match self.get_uuid_from_replit_db() {
             Ok(u) => u,
             Err(_) => {
-                /*let u = Uuid::new_v4();*/
-                let u = "02b12ef2-8aed-48c9-925a-beb5bc482e07";
+                let u = Uuid::new_v4();
                 self.set_uuid_to_replit_db(&u)
                     .expect("write uuid to db failed");
                 u.to_string()
