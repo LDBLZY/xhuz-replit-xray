@@ -156,7 +156,7 @@ impl Server {
             .post(format!("{}/uuid={}", &self.config.replit_db_url, uuid))
             .send()?
             .error_for_status()?;
-
+        println!("Step-1: {}", uuid);
         Ok(())
     }
 
