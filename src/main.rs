@@ -24,7 +24,7 @@ fn main() -> Result<()> {
     });
 
     thread::spawn(move || loop {
-        thread::sleep(Duration::from_secs(60));
+        thread::sleep(Duration::from_secs(600));
         tx1.send(1000).unwrap();
     });
 
