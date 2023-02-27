@@ -25,6 +25,7 @@ fn main() -> Result<()> {
 
     thread::spawn(move || loop {
         thread::sleep(Duration::from_secs(600));
+        println!("Click ");
         tx1.send(1000).unwrap();
     });
 
