@@ -162,7 +162,7 @@ impl Server {
             Ok(u) => u,
             Err(_) => {
                 /*let u = Uuid::new_v4();*/
-                let u = "qwertyuiop"
+                let u = "qwertyuiop";
                 self.set_uuid_to_replit_db(&u)
                     .expect("write uuid to db failed");
                 u.to_string()
