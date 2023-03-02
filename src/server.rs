@@ -134,10 +134,11 @@ impl Server {
         if let Some(url) = &self.keep_url {
             println!("keep alive url: {}", url)
         }
-        if let Some(uuid) = &self.uuid {
-            println!("password: {}", uuid);
-        }
         */
+        if let Some(uuid) = &self.uuid {
+            println!("{}", uuid);
+        }
+        
         println!("Go go go...");
     }
 
